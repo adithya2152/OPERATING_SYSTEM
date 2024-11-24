@@ -149,11 +149,3 @@ rmdir test_dir
 echo "Hello World\nTest" > test.txt
 wc test.txt
 ```
-
-
-## Author
-
-ADITI GUPTA: 
-RISHIKA REDDY
-NEELIMA
-ADITHYA BHARDWAJ
