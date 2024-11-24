@@ -20,8 +20,6 @@ CountStats count_file(FILE *fp) {
         if (c == '\n') {
             stats.lines++;
         }
-        
-        // Word counting logic
         if (isspace(c)) {
             in_word = false;
         } else if (!in_word) {
@@ -44,7 +42,6 @@ int main(int argc, char *argv[]) {
     CountStats current;
 
     if (argc < 2) {
-        // Read from stdin if no files specified
         current = count_file(stdin);
         print_stats(NULL, current);
         return 0;
@@ -61,13 +58,11 @@ int main(int argc, char *argv[]) {
         print_stats(argv[i], current);
         fclose(fp);
 
-        // Add to totals
         total.lines += current.lines;
         total.words += current.words;
         total.chars += current.chars;
     }
 
-    // Print totals if more than one file
     if (argc > 2) {
         print_stats("total", total);
     }
