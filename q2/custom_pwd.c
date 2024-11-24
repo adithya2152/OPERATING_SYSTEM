@@ -15,7 +15,6 @@ void print_line_numbers(int line_num) {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        // Interactive mode with line numbers
         char buffer[BUFFER_SIZE];
         int line_num = 1;
         
@@ -37,7 +36,6 @@ int main(int argc, char *argv[]) {
         int line_num = 1;
         char buffer[BUFFER_SIZE];
         
-        // Print filename if multiple files
         if (argc > 2) {
             printf("\n%s==> %s <==%s\n", YELLOW, argv[i], RESET);
         }
